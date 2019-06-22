@@ -1,0 +1,22 @@
+<%= form_with(model: tweetum, local: true) do |form| %>
+  <% if tweetum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tweetum.errors.count, "error") %> prohibited this tweetum from being saved:</h2>
+
+      <ul>
+      <% tweetum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tweta %>
+    <%= form.text_area :tweta, id: :tweetum_tweta %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

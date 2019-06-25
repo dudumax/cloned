@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tweta: MyText
+  tweet: MyText
 
 two:
-  tweta: MyText
+  tweet: MyText

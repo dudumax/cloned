@@ -1,2 +1,0 @@
-class Tweetum < ApplicationRecord
-end

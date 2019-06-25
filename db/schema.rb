@@ -10,19 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190622073302) do
+ActiveRecord::Schema.define(version: 20190625113555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "contacts", force: :cascade do |t|
-    t.text "tweeta"
+  create_table "tweeets", force: :cascade do |t|
+    t.text "tweet"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tweeta", force: :cascade do |t|
-    t.text "tweta"
+    t.text "Name"
+    t.string "email"
+    t.text "content"
+    t.text "tweeta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

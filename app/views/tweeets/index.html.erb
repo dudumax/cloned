@@ -2,26 +2,14 @@
 
 <h1>Tweeets</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tweet</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @tweeets.each do |tweeet| %>
-      <tr>
-        <td><%= tweeet.tweet %></td>
-        <td><%= link_to 'Show', tweeet %></td>
-        <td><%= link_to 'Edit', edit_tweeet_path(tweeet) %></td>
-        <td><%= link_to 'Destroy', tweeet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      
+        <h2><%= tweeet.tweet %></h2>
+        <p><%= link_to 'Show', tweeet %>
+        <%= link_to 'Edit', edit_tweeet_path(tweeet) %>
+        <%= link_to 'Destroy', tweeet, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <hr/>
     <% end %>
-  </tbody>
-</table>
 
-<br>
 
 <%= link_to 'New Tweeet', new_tweeet_path %>

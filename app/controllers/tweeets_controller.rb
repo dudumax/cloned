@@ -16,7 +16,11 @@ class TweeetsController < ApplicationController
 
   # GET /tweeets/new
   def new
+    if params[:back]
+      @tweeet = Tweeet.new(tweeet_params)
+    else
     @tweeet = Tweeet.new
+    end
   end
 
   # GET /tweeets/1/edit
@@ -62,6 +66,11 @@ class TweeetsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def confirm
+    @tweeet = Tweeet.new(tweeet_params)
+    render :new if @tweeet.invalid?
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -21,13 +21,4 @@ ActiveRecord::Schema.define(version: 20190625113555) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tweeta", force: :cascade do |t|
-    t.text "Name"
-    t.string "email"
-    t.text "content"
-    t.text "tweeta"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
